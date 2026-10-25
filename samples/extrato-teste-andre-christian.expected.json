@@ -1,0 +1,14 @@
+[
+  {
+    "date": "2026-10-24",
+    "description": "GASTO-TESTE-ANDRE",
+    "amountCents": -200000,
+    "category": "Outros"
+  },
+  {
+    "date": "2026-10-25",
+    "description": "GASTO-TESTE-CHRISTIAN-WPP",
+    "amountCents": -100000,
+    "category": "Outros"
+  }
+]

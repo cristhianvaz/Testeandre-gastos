@@ -1,0 +1,122 @@
+[
+  {
+    "date": "2026-10-01",
+    "description": "SALARIO EMPRESA XYZ LTDA",
+    "amountCents": 850000,
+    "category": "Receitas"
+  },
+  {
+    "date": "2026-10-02",
+    "description": "ALUGUEL APARTAMENTO OUTUBRO",
+    "amountCents": -220000,
+    "category": "Moradia"
+  },
+  {
+    "date": "2026-10-03",
+    "description": "SUPERMERCADO PAO DE ACUCAR",
+    "amountCents": -41237,
+    "category": "Alimentação"
+  },
+  {
+    "date": "2026-10-04",
+    "description": "UBER *TRIP SAO PAULO",
+    "amountCents": -3290,
+    "category": "Transporte"
+  },
+  {
+    "date": "2026-10-05",
+    "description": "IFOOD *RESTAURANTE SABOR",
+    "amountCents": -7850,
+    "category": "Alimentação"
+  },
+  {
+    "date": "2026-10-06",
+    "description": "NETFLIX.COM ASSINATURA",
+    "amountCents": -5590,
+    "category": "Lazer"
+  },
+  {
+    "date": "2026-10-07",
+    "description": "DROGASIL FARMACIA 1234",
+    "amountCents": -8975,
+    "category": "Saúde"
+  },
+  {
+    "date": "2026-10-08",
+    "description": "POSTO SHELL COMBUSTIVEL",
+    "amountCents": -25000,
+    "category": "Transporte"
+  },
+  {
+    "date": "2026-10-09",
+    "description": "ENEL ENERGIA ELETRICA",
+    "amountCents": -18742,
+    "category": "Moradia"
+  },
+  {
+    "date": "2026-10-10",
+    "description": "AMAZON MARKETPLACE BR",
+    "amountCents": -34999,
+    "category": "Compras"
+  },
+  {
+    "date": "2026-10-11",
+    "description": "SPOTIFY PREMIUM",
+    "amountCents": -2190,
+    "category": "Lazer"
+  },
+  {
+    "date": "2026-10-12",
+    "description": "PIX RECEBIDO JOAO SILVA",
+    "amountCents": 15000,
+    "category": "Receitas"
+  },
+  {
+    "date": "2026-10-13",
+    "description": "SMART FIT MENSALIDADE",
+    "amountCents": -11990,
+    "category": "Saúde"
+  },
+  {
+    "date": "2026-10-14",
+    "description": "ALURA CURSOS ONLINE",
+    "amountCents": -8900,
+    "category": "Educação"
+  },
+  {
+    "date": "2026-10-15",
+    "description": "VIVO FIBRA INTERNET",
+    "amountCents": -12999,
+    "category": "Moradia"
+  },
+  {
+    "date": "2026-10-16",
+    "description": "RESTAURANTE OUTBACK",
+    "amountCents": -18640,
+    "category": "Alimentação"
+  },
+  {
+    "date": "2026-10-18",
+    "description": "99APP *CORRIDA",
+    "amountCents": -1870,
+    "category": "Transporte"
+  },
+  {
+    "date": "2026-10-20",
+    "description": "MERCADO LIVRE COMPRA",
+    "amountCents": -21000,
+    "category": "Compras"
+  },
+  {
+    "date": "2026-10-22",
+    "description": "CINEMARK INGRESSOS",
+    "amountCents": -6400,
+    "category": "Lazer"
+  },
+  {
+    "date": "2026-10-25",
+    "description": "TARIFA PACOTE SERVICOS",
+    "amountCents": -3490,
+    "category": "Taxas e Tarifas"
+  }
+]

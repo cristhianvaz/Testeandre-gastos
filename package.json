@@ -1,0 +1,18 @@
+{
+  "name": "teste-gastos",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Controle de gastos: importa extratos em PDF, extrai (texto/OCR), categoriza e armazena em SQLite.",
+  "scripts": {
+    "setup": "npm install && npm run setup:extractor && npm --prefix backend install && npm --prefix frontend install",
+    "setup:extractor": "python3 -m venv extractor/.venv && extractor/.venv/bin/pip install -q -r extractor/requirements.txt",
+    "dev": "concurrently -n api,web -c blue,magenta \"npm --prefix backend run dev\" \"npm --prefix frontend run dev\"",
+    "dev:all": "bash scripts/dev-all.sh",
+    "dev:down": "docker compose down",
+    "test": "npm --prefix backend test",
+    "sample:pdf": "extractor/.venv/bin/python samples/generate_sample_pdf.py"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.5"
+  }
+}

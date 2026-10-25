@@ -1,0 +1,47 @@
+name: teste-gastos
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    env_file:
+      - path: .env
+        required: false
+    ports:
+      - "3333:3333"
+    volumes:
+      - ./backend/src:/app/backend/src # hot reload (node --watch)
+      - ./extractor/pdf_extractor:/app/extractor/pdf_extractor
+      - gastos-data:/data # SQLite persiste entre reinícios
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://localhost:3333/api/health').then(r => process.exit(r.ok ? 0 : 1)).catch(() => process.exit(1))"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+
+  web:
+    build: ./frontend
+    environment:
+      API_URL: http://api:3333
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./frontend/src:/app/src # hot reload (Vite)
+    depends_on:
+      api:
+        condition: service_healthy
+
+  # Túnel público (Cloudflare Quick Tunnel) para o webhook da Twilio.
+  # A URL muda a cada reinício; o script dev:all lê a URL atual pela porta de métricas.
+  tunnel:
+    image: cloudflare/cloudflared:2025.9.1
+    command: tunnel --no-autoupdate --metrics 0.0.0.0:2000 --url http://api:3333
+    ports:
+      - "127.0.0.1:2000:2000"
+    depends_on:
+      api:
+        condition: service_healthy
+
+volumes:
+  gastos-data:
